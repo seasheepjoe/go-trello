@@ -45,7 +45,7 @@ func main() {
 	}
 	json.Unmarshal(configFile, &config)
 	fullUrl = config["baseUrl"] + config["apiKey"] + config["secret"]
-	auth = smtp.PlainAuth("", "trellodev2020", "password", "smtp.gmail.com")
+	auth = smtp.PlainAuth("", "trellodev2020", config["password"], "smtp.gmail.com")
 	repeat(24*time.Second, getCards)
 }
 
