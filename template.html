@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>Rappel trello</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="assets/template.css" />
+    <style>
+      body {
+        margin: 0 auto;
+        text-align: center;
+        font-family: Arial, Helvetica, sans-serif;
+      }
+
+      .main {
+        margin: auto;
+        width: 50%;
+        padding: 25px;
+        background-color: #315ec3;
+        border-radius: 15px;
+        color: #f6f6f6;
+      }
+
+      .cardEl {
+        color: #f6f6f6;
+        font-size: 20px;
+      }
+
+      .cardEl > span {
+        font-size: 30px;
+        font-weight: bold;
+        color: #f6f6f6;
+      }
+
+      a {
+        color: #f6f6f6 !important;
+      }
+
+      #underline {
+        text-decoration: underline;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="main">
+      <p class="cardEl cardName">
+        <span id="underline">Rappel pour :</span>&nbsp;{{ .CardName }}
+      </p>
+      <p class="cardEl cardUrl">
+        <span id="underline">Lien :</span>&nbsp;<a
+          href="{{ .CardUrl }}"
+          >{{ .CardUrl }}</a
+        >
+      </p>
+      <p class="cardEl cardDue">
+        <span id="underline">Temps restant :</span>&nbsp;{{ .CardDue }}
+      </p>
+    </div>
+  </body>
+</html>
